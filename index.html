@@ -4,105 +4,227 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saksham Travels - Premium Varanasi Travel</title>
+    
+    <!-- Reliable CDN for Styles and Icons -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
         .font-display { font-family: 'Playfair Display', serif; }
         .font-sans { font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
-        @keyframes reveal-up { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-reveal { animation: reveal-up 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+        
+        @keyframes reveal-up {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-reveal { animation: reveal-up 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+        
+        /* Image fallback style */
+        img { background-color: #f3f4f6; }
+        
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.7) 100%);
+        }
     </style>
 </head>
-<body class="bg-[#FAF9F6] text-[#1A1A1A] font-sans selection:bg-[#D4AF37] selection:text-white">
+<body class="bg-[#FAF9F6] text-[#1A1A1A] font-sans selection:bg-[#D4AF37] selection:text-white overflow-x-hidden">
 
-    <!-- Navbar -->
+    <!-- Navigation -->
     <nav id="nav" class="fixed w-full z-50 transition-all duration-500 py-6 text-white">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="flex flex-col">
-                <span class="text-xl md:text-2xl font-display font-bold uppercase tracking-tight">Saksham <span class="text-[#D4AF37]">Travels</span></span>
-                <span class="text-[9px] tracking-[0.3em] uppercase opacity-70">Varanasi Premier</span>
+            <div class="flex flex-col cursor-pointer" onclick="window.scrollTo(0,0)">
+                <span class="text-xl md:text-2xl font-display font-bold uppercase tracking-tight">SAKSHAM <span class="text-[#D4AF37]">TRAVELS</span></span>
+                <span class="text-[9px] tracking-[0.4em] uppercase opacity-70">Varanasi • Since 2018</span>
             </div>
             <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-widest">
-                <a href="#fleet" class="hover:text-[#D4AF37]">Fleet</a>
-                <a href="#contact" class="hover:text-[#D4AF37]">Contact</a>
-                <a href="https://wa.me/917266010969" class="text-[#D4AF37]">WhatsApp</a>
+                <a href="#fleet" class="hover:text-[#D4AF37] transition-colors">The Fleet</a>
+                <a href="#contact" class="hover:text-[#D4AF37] transition-colors">Contact</a>
+                <a href="https://wa.me/917266010969" class="text-[#D4AF37] border border-[#D4AF37] px-4 py-2 rounded-full hover:bg-[#D4AF37] hover:text-white transition-all">WhatsApp</a>
             </div>
-            <a href="tel:+917266010969" class="md:hidden text-[#D4AF37]"><i data-lucide="phone"></i></a>
+            <a href="tel:+917266010969" class="md:hidden text-[#D4AF37] p-2"><i data-lucide="phone"></i></a>
         </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section class="relative h-screen flex items-center bg-black overflow-hidden">
-        <div class="absolute inset-0 opacity-60">
-            <img src="https://images.unsplash.com/photo-1590050752117-23a9d7fc20c7?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover" alt="Varanasi">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 hero-gradient z-10"></div>
+            <!-- High Reliability Hero Image -->
+            <img src="https://images.pexels.com/photos/3563795/pexels-photo-3563795.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+                 class="w-full h-full object-cover" 
+                 alt="Varanasi Morning"
+                 onerror="this.src='https://images.unsplash.com/photo-1561361513-2d000a50f0dc?q=80&w=1600&auto=format&fit=crop'">
         </div>
-        <div class="container mx-auto px-6 relative z-10 text-white">
-            <h1 class="text-5xl md:text-8xl font-display leading-tight mb-8 animate-reveal">Arrival In <span class="italic text-[#D4AF37]">Paradise.</span></h1>
-            <p class="text-lg font-light text-white/70 max-w-lg mb-10">Premium travel solutions for the soul of Kashi. Experience safety and luxury at your doorstep.</p>
-            <div class="flex flex-wrap gap-4">
-                <a href="https://wa.me/917266010969?text=I'd%20like%20to%20book%20a%20ride" class="bg-[#D4AF37] text-white px-10 py-4 rounded-full text-[10px] font-bold uppercase tracking-[0.2em]">Book via WhatsApp</a>
+        <div class="container mx-auto px-6 relative z-20 text-white">
+            <div class="max-w-2xl animate-reveal">
+                <span class="text-[#D4AF37] text-xs font-bold uppercase tracking-[0.5em] mb-4 block">Premium Concierge</span>
+                <h1 class="text-5xl md:text-8xl font-display leading-[1.1] mb-8">Travel Kashi <br>In <span class="italic text-[#D4AF37]">Serenity.</span></h1>
+                <p class="text-lg font-light text-white/70 mb-10 leading-relaxed">Punctual, safe, and sophisticated travel solutions for the world's oldest living city. Your journey is our priority.</p>
+                <div class="flex flex-wrap gap-4">
+                    <button onclick="window.location.href='https://wa.me/917266010969?text=Hello%20Saksham%20Travels,%20I%20want%20to%20book%20a%20ride.'" 
+                            class="bg-[#D4AF37] hover:bg-white hover:text-black text-white px-10 py-5 text-[10px] font-bold uppercase tracking-[0.3em] transition-all shadow-2xl">
+                        Book via WhatsApp
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Fleet -->
-    <section id="fleet" class="py-24 bg-white">
+    <!-- Fleet Section -->
+    <section id="fleet" class="py-28 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-display text-center mb-16 uppercase">Our Fleet</h2>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="border p-8 hover:shadow-xl transition-all">
-                    <img src="https://images.unsplash.com/photo-1662496739822-26d0e657c919?auto=format&fit=crop&q=80&w=800" class="w-full h-48 object-cover mb-6">
-                    <h3 class="text-xl font-display font-bold">Maruti Swift Dzire</h3>
-                    <p class="text-gray-400 text-xs mt-2 uppercase tracking-widest">Sedan • Starts ₹2,000</p>
-                    <button onclick="window.location.href='https://wa.me/917266010969?text=Book%20Dzire'" class="mt-6 w-full border border-black py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-black hover:text-white">Reserve</button>
+            <div class="text-center mb-20">
+                <span class="text-[#D4AF37] text-xs font-bold uppercase tracking-[0.4em] mb-4 block">Our Collection</span>
+                <h2 class="text-4xl md:text-5xl font-display text-black uppercase">Refined Mobility</h2>
+                <div class="w-16 h-px bg-[#D4AF37] mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Sedan - Dzire -->
+                <div class="group border border-gray-100 p-8 hover:shadow-2xl transition-all duration-500 bg-[#FAF9F6]">
+                    <div class="overflow-hidden mb-8 h-48">
+                        <img src="https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                             alt="Luxury Sedan">
+                    </div>
+                    <span class="text-[#D4AF37] text-[10px] font-bold uppercase tracking-widest">Maruti Swift Dzire</span>
+                    <h3 class="text-2xl font-display my-3">Luxury Sedan</h3>
+                    <div class="flex justify-between items-center mt-10 border-t border-gray-200 pt-6">
+                        <span class="text-gray-400 text-[10px] uppercase tracking-widest font-bold">Starts ₹2,000</span>
+                        <a href="https://wa.me/917266010969?text=I'd%20like%20to%20book%20the%20Maruti%20Dzire." 
+                           class="text-black font-bold text-[10px] uppercase tracking-[0.2em] border-b border-black hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors">
+                            Reserve
+                        </a>
+                    </div>
                 </div>
-                <div class="border p-8 hover:shadow-xl transition-all">
-                    <img src="https://images.unsplash.com/photo-1596541223130-5d31a73fb6c6?auto=format&fit=crop&q=80&w=800" class="w-full h-48 object-cover mb-6">
-                    <h3 class="text-xl font-display font-bold">Maruti Ertiga</h3>
-                    <p class="text-gray-400 text-xs mt-2 uppercase tracking-widest">SUV • Starts ₹3,000</p>
-                    <button onclick="window.location.href='https://wa.me/917266010969?text=Book%20Ertiga'" class="mt-6 w-full border border-black py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-black hover:text-white">Reserve</button>
+
+                <!-- SUV - Ertiga -->
+                <div class="group border border-gray-100 p-8 hover:shadow-2xl transition-all duration-500 bg-[#FAF9F6]">
+                    <div class="overflow-hidden mb-8 h-48">
+                        <img src="https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                             alt="Executive SUV">
+                    </div>
+                    <span class="text-[#D4AF37] text-[10px] font-bold uppercase tracking-widest">Maruti Ertiga</span>
+                    <h3 class="text-2xl font-display my-3">Executive SUV</h3>
+                    <div class="flex justify-between items-center mt-10 border-t border-gray-200 pt-6">
+                        <span class="text-gray-400 text-[10px] uppercase tracking-widest font-bold">Starts ₹3,000</span>
+                        <a href="https://wa.me/917266010969?text=I'd%20like%20to%20book%20the%20Maruti%20Ertiga." 
+                           class="text-black font-bold text-[10px] uppercase tracking-[0.2em] border-b border-black hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors">
+                            Reserve
+                        </a>
+                    </div>
                 </div>
-                <div class="border p-8 hover:shadow-xl transition-all">
-                    <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&q=80&w=800" class="w-full h-48 object-cover mb-6">
-                    <h3 class="text-xl font-display font-bold">Innova Crysta</h3>
-                    <p class="text-gray-400 text-xs mt-2 uppercase tracking-widest">Premium • Starts ₹4,500</p>
-                    <button onclick="window.location.href='https://wa.me/917266010969?text=Book%20Innova'" class="mt-6 w-full border border-black py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-black hover:text-white">Reserve</button>
+
+                <!-- Premium - Innova -->
+                <div class="group border border-gray-100 p-8 hover:shadow-2xl transition-all duration-500 bg-[#FAF9F6]">
+                    <div class="overflow-hidden mb-8 h-48">
+                        <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                             alt="Premium Gold">
+                    </div>
+                    <span class="text-[#D4AF37] text-[10px] font-bold uppercase tracking-widest">Toyota Innova Crysta</span>
+                    <h3 class="text-2xl font-display my-3">Premium Gold</h3>
+                    <div class="flex justify-between items-center mt-10 border-t border-gray-200 pt-6">
+                        <span class="text-gray-400 text-[10px] uppercase tracking-widest font-bold">Starts ₹4,500</span>
+                        <a href="https://wa.me/917266010969?text=I'd%20like%20to%20book%20the%20Innova%20Crysta." 
+                           class="text-black font-bold text-[10px] uppercase tracking-[0.2em] border-b border-black hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors">
+                            Reserve
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-24 bg-[#FAF9F6]">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-display mb-8">Ready to Start?</h2>
-            <p class="text-gray-500 mb-12">Contact us 24/7 for bookings and inquiries.</p>
-            <div class="flex flex-col md:flex-row justify-center gap-12 font-display text-2xl">
-                <a href="tel:+917266010969" class="hover:text-[#D4AF37]">+91 72660 10969</a>
-                <a href="tel:+919451797977" class="hover:text-[#D4AF37]">+91 94517 97977</a>
+    <!-- Contact & Details -->
+    <section id="contact" class="py-28 bg-[#121212] text-white">
+        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20">
+            <div class="animate-reveal">
+                <span class="text-[#D4AF37] text-xs font-bold uppercase tracking-[0.4em] mb-4 block">Concierge Access</span>
+                <h2 class="text-5xl font-display mb-12">Arrive In <br>Style.</h2>
+                <div class="space-y-10">
+                    <div>
+                        <h4 class="text-[10px] uppercase tracking-[0.4em] text-white/30 mb-3">Direct Lines</h4>
+                        <div class="flex flex-col gap-3 font-display text-3xl">
+                            <a href="tel:+917266010969" class="hover:text-[#D4AF37] transition-colors">+91 72660 10969</a>
+                            <a href="tel:+919451797977" class="hover:text-[#D4AF37] transition-colors">+91 94517 97977</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-[10px] uppercase tracking-[0.4em] text-white/30 mb-3">Office Hub</h4>
+                        <p class="text-xl font-display text-white/80">Phase-1, Ashok Vihar Colony,<br>Pahadiya, Sarnath, Varanasi 221007</p>
+                    </div>
+                    <div>
+                        <h4 class="text-[10px] uppercase tracking-[0.4em] text-white/30 mb-3">Email Inquiry</h4>
+                        <p class="text-xl font-display text-white/80">sakshamtravels139@gmail.com</p>
+                    </div>
+                </div>
             </div>
-            <p class="mt-8 text-gray-400 uppercase tracking-widest text-[10px]">sakshamtravels139@gmail.com</p>
+            
+            <div class="bg-white p-12 text-black shadow-2xl">
+                <h3 class="text-2xl font-display font-bold mb-10">Reservation Request</h3>
+                <div class="space-y-8">
+                    <div class="border-b border-gray-200 pb-2">
+                        <label class="text-[9px] uppercase tracking-widest text-gray-400 font-bold block mb-1">Full Name</label>
+                        <input type="text" id="fm-name" placeholder="E.g. Vikram Sharma" class="w-full bg-transparent font-display text-xl outline-none">
+                    </div>
+                    <div class="border-b border-gray-200 pb-2">
+                        <label class="text-[9px] uppercase tracking-widest text-gray-400 font-bold block mb-1">Service Type</label>
+                        <select id="fm-service" class="w-full bg-transparent font-display text-xl outline-none">
+                            <option>Airport Pick/Drop</option>
+                            <option>Ghat & Aarti Tour</option>
+                            <option>Sarnath Sacred Loop</option>
+                            <option>Ayodhya Outstation</option>
+                        </select>
+                    </div>
+                    <button onclick="requestBooking()" class="w-full bg-black text-white py-6 text-[10px] font-bold uppercase tracking-[0.4em] hover:bg-[#D4AF37] transition-all shadow-xl">
+                        Send WhatsApp Request
+                    </button>
+                    <p class="text-[9px] text-center text-gray-400 uppercase tracking-widest">Immediate Response Guaranteed</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-black text-white py-12 text-center text-[10px] uppercase tracking-[0.4em] opacity-40">
-        &copy; 2024 Saksham Travels Varanasi.
+    <!-- Footer -->
+    <footer class="py-16 bg-[#0a0a0a] text-center border-t border-white/5">
+        <div class="flex flex-col items-center gap-6">
+            <span class="text-xl font-display font-bold uppercase text-white tracking-widest">SAKSHAM <span class="text-[#D4AF37]">TRAVELS</span></span>
+            <div class="flex gap-8 text-white/40">
+                <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" size="18"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" size="18"></i></a>
+            </div>
+            <p class="text-[9px] text-white/20 uppercase tracking-[0.5em]">&copy; 2024 Varanasi, India. Excellence in Motion.</p>
+        </div>
     </footer>
 
     <script>
+        // Start Icons
         lucide.createIcons();
+
+        // Smooth Navbar Transition
         window.onscroll = function() {
             const nav = document.getElementById('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('bg-white/95', 'text-black', 'shadow-sm');
-                nav.classList.remove('text-white');
+            if (window.scrollY > 60) {
+                nav.classList.add('bg-white/95', 'text-black', 'shadow-xl', 'py-4');
+                nav.classList.remove('text-white', 'py-6');
             } else {
-                nav.classList.remove('bg-white/95', 'text-black', 'shadow-sm');
-                nav.classList.add('text-white');
+                nav.classList.remove('bg-white/95', 'text-black', 'shadow-xl', 'py-4');
+                nav.classList.add('text-white', 'py-6');
             }
         };
+
+        // WhatsApp Form Logic
+        function requestBooking() {
+            const name = document.getElementById('fm-name').value;
+            const service = document.getElementById('fm-service').value;
+            if(!name) { alert("Please enter your name"); return; }
+            const msg = `Hello Saksham Travels, I am ${name}. I want to inquire about a ${service} in Varanasi.`;
+            window.open(`https://wa.me/917266010969?text=${encodeURIComponent(msg)}`, '_blank');
+        }
     </script>
 </body>
 </html>
