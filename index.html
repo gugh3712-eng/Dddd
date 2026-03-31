@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saksham Travels - Premium Varanasi Travel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .font-display { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
+        @keyframes reveal-up { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-reveal { animation: reveal-up 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+    </style>
+</head>
+<body class="bg-[#FAF9F6] text-[#1A1A1A] font-sans selection:bg-[#D4AF37] selection:text-white">
+
+    <!-- Navbar -->
+    <nav id="nav" class="fixed w-full z-50 transition-all duration-500 py-6 text-white">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex flex-col">
+                <span class="text-xl md:text-2xl font-display font-bold uppercase tracking-tight">Saksham <span class="text-[#D4AF37]">Travels</span></span>
+                <span class="text-[9px] tracking-[0.3em] uppercase opacity-70">Varanasi Premier</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-widest">
+                <a href="#fleet" class="hover:text-[#D4AF37]">Fleet</a>
+                <a href="#contact" class="hover:text-[#D4AF37]">Contact</a>
+                <a href="https://wa.me/917266010969" class="text-[#D4AF37]">WhatsApp</a>
+            </div>
+            <a href="tel:+917266010969" class="md:hidden text-[#D4AF37]"><i data-lucide="phone"></i></a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative h-screen flex items-center bg-black overflow-hidden">
+        <div class="absolute inset-0 opacity-60">
+            <img src="https://images.unsplash.com/photo-1590050752117-23a9d7fc20c7?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover" alt="Varanasi">
+        </div>
+        <div class="container mx-auto px-6 relative z-10 text-white">
+            <h1 class="text-5xl md:text-8xl font-display leading-tight mb-8 animate-reveal">Arrival In <span class="italic text-[#D4AF37]">Paradise.</span></h1>
+            <p class="text-lg font-light text-white/70 max-w-lg mb-10">Premium travel solutions for the soul of Kashi. Experience safety and luxury at your doorstep.</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://wa.me/917266010969?text=I'd%20like%20to%20book%20a%20ride" class="bg-[#D4AF37] text-white px-10 py-4 rounded-full text-[10px] font-bold uppercase tracking-[0.2em]">Book via WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet -->
+    <section id="fleet" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-display text-center mb-16 uppercase">Our Fleet</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="border p-8 hover:shadow-xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1662496739822-26d0e657c919?auto=format&fit=crop&q=80&w=800" class="w-full h-48 object-cover mb-6">
+                    <h3 class="text-xl font-display font-bold">Maruti Swift Dzire</h3>
+                    <p class="text-gray-400 text-xs mt-2 uppercase tracking-widest">Sedan • Starts ₹2,000</p>
+                    <button onclick="window.location.href='https://wa.me/917266010969?text=Book%20Dzire'" class="mt-6 w-full border border-black py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-black hover:text-white">Reserve</button>
+                </div>
+                <div class="border p-8 hover:shadow-xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1596541223130-5d31a73fb6c6?auto=format&fit=crop&q=80&w=800" class="w-full h-48 object-cover mb-6">
+                    <h3 class="text-xl font-display font-bold">Maruti Ertiga</h3>
+                    <p class="text-gray-400 text-xs mt-2 uppercase tracking-widest">SUV • Starts ₹3,000</p>
+                    <button onclick="window.location.href='https://wa.me/917266010969?text=Book%20Ertiga'" class="mt-6 w-full border border-black py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-black hover:text-white">Reserve</button>
+                </div>
+                <div class="border p-8 hover:shadow-xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&q=80&w=800" class="w-full h-48 object-cover mb-6">
+                    <h3 class="text-xl font-display font-bold">Innova Crysta</h3>
+                    <p class="text-gray-400 text-xs mt-2 uppercase tracking-widest">Premium • Starts ₹4,500</p>
+                    <button onclick="window.location.href='https://wa.me/917266010969?text=Book%20Innova'" class="mt-6 w-full border border-black py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-black hover:text-white">Reserve</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-[#FAF9F6]">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-display mb-8">Ready to Start?</h2>
+            <p class="text-gray-500 mb-12">Contact us 24/7 for bookings and inquiries.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-12 font-display text-2xl">
+                <a href="tel:+917266010969" class="hover:text-[#D4AF37]">+91 72660 10969</a>
+                <a href="tel:+919451797977" class="hover:text-[#D4AF37]">+91 94517 97977</a>
+            </div>
+            <p class="mt-8 text-gray-400 uppercase tracking-widest text-[10px]">sakshamtravels139@gmail.com</p>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-12 text-center text-[10px] uppercase tracking-[0.4em] opacity-40">
+        &copy; 2024 Saksham Travels Varanasi.
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        window.onscroll = function() {
+            const nav = document.getElementById('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/95', 'text-black', 'shadow-sm');
+                nav.classList.remove('text-white');
+            } else {
+                nav.classList.remove('bg-white/95', 'text-black', 'shadow-sm');
+                nav.classList.add('text-white');
+            }
+        };
+    </script>
+</body>
+</html>
+
